@@ -1,0 +1,19 @@
+@import 'assets/styles/vars';
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 2rem;
+  background-color: $secondary-background;
+}
+
+.title {
+  flex: 1;
+  font-size: 1.2rem;
+  color: $secondary-font-color;
+}
+
+.actions {
+
+}

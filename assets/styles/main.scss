@@ -1,0 +1,43 @@
+@import 'vars';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 62.5%; //1rem = 10px
+}
+
+body {
+  position: relative;
+  font-size: 100%;
+  min-height: 100%;
+  max-width: 100vw;
+  color: $primary-font-color;
+  background-color: $primary-background;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Responsive font-sizes
+@media (min-width: 768px) {
+  html {
+    font-size: 68.75%; //1rem = 11px on larger screens
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 75%; //1rem = 12px on even larger screens
+  }
+}

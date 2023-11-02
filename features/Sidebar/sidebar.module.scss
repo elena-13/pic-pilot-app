@@ -1,0 +1,17 @@
+@import 'assets/styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  background-color: $secondary-background;
+  padding: 1.5rem 2rem;
+  height: calc(100vh - 60px);
+}
+
+.header {
+}
+
+.main {
+  flex: 1;
+}

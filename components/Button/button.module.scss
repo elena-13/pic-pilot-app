@@ -1,0 +1,52 @@
+@import 'assets/styles/vars';
+
+.button {
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+  outline: none;
+  color: $button-font-color;
+  background-color: $primary-canvas;
+
+  &:hover {
+    background-color: darken($primary-canvas, 10%);
+  }
+
+  &:active {
+    background-color: darken($primary-canvas, 15%);
+  }
+
+  &:focus {
+    border-color: $secondary-border;
+  }
+}
+
+.primary {
+  background-color: $button-background;
+  border-color: $secondary-border;
+
+  &:hover {
+    background-color: $button-hover-background;
+  }
+
+  &:active {
+    background-color: $accent-active-background;
+  }
+
+  &:focus {
+    border-color: adjust-color($accent-color, $lightness: -20%);
+  }
+}
+
+.secondary {
+  background-color: $secondary-background;
+  color: $secondary-font-color;
+  border-color: $secondary-border;
+
+  &:hover {
+    background-color: darken($secondary-background, 10%);
+  }
+}
