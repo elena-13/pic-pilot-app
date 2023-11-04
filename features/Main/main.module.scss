@@ -1,4 +1,6 @@
+@import 'assets/styles/vars';
 
 .main {
   display: flex;
+  background-color: $secondary-background;
 }
