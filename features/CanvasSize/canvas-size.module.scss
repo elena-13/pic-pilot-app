@@ -1,0 +1,47 @@
+@import 'assets/styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  border-bottom: 1px solid $secondary-border;
+}
+
+.label {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+
+  .item {
+    flex: 1;
+    display: block;
+    width: 60px;
+  }
+
+  .input {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: $secondary-border;
+    color: $primary-canvas;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+  }
+
+  .dash {
+    margin: 1rem;
+    align-self: flex-end;
+    font-size: 0.5rem;
+  }
+}

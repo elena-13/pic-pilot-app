@@ -1,5 +1,7 @@
 import React from 'react'
 
+import CanvasSize from '@/features/CanvasSize/CanvasSize'
+
 import Button from '@/components/Button/Button'
 
 import styles from './sidebar.module.scss';
@@ -8,8 +10,7 @@ const Sidebar = () => {
   return (
     <aside className={styles.container}>
       <div className={styles.header}>
-        <h3>Preset</h3>
-        <span>Small Portrait</span>
+        <CanvasSize />
       </div>
       <div className={styles.main}>
         <div>

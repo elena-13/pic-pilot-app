@@ -3,9 +3,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: 240px;
   background-color: $secondary-background;
-  padding: 1.5rem 2rem;
+  border-right: 1px solid $secondary-border;
   height: calc(100vh - 60px);
 }
 

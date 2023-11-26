@@ -1,21 +1,25 @@
 // Dark Theme Primary Colors
-$primary-background: #121212; // Main background areas
-$primary-canvas: #2D2D2D; // Canvas or content area background
-$primary-font-color: #FFFFFF; // Main font color for readability
+$primary-background: #141414; // Main background areas
+$primary-canvas: #f5f5f5; // Canvas or content area background
+$primary-font-color: #ffffff; // Main font color for readability
 
 // Dark Theme Secondary Colors
 $secondary-background: #333333; // Background for secondary elements like side panels
-$secondary-border: #555555; // Borders for elements like input fields
-$secondary-font-color: #BBBBBB; // Font color for secondary information
+$secondary-border: #4f4f4f; // Borders for elements like input fields
+$secondary-font-color: #4f4f4f; // Font color for secondary information
 
 // Accent Colors
-$accent-color: #1DB954; // Spotify green for buttons and interactive elements
+$accent-color: #b2f366; // Spotify green for buttons and interactive elements
 $accent-hover: darken($accent-color, 10%); // Darken the accent color for hover states
-$accent-active-background: #1ED760; // A lighter green for active or highlighted states
+$accent-active-background: darken(
+  $accent-color,
+  20%
+); // A lighter green for active or highlighted states
+$accent-font-color: $primary-background;
 
 // Interface Element Colors
 $button-background: $accent-color; // Background color for buttons
-$button-font-color: $primary-font-color; // Font color for buttons
+$button-font-color: $secondary-font-color; // Font color for buttons
 $button-hover-background: $accent-hover; // Background color for buttons on hover
 
 // Slider Controls
