@@ -1,45 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { NumericFormat } from 'react-number-format';
 
 import Select from '@/components/Select/Select';
 
+import { templateOptions, unitsOptions } from './constants';
+
 import styles from './canvas-size.module.scss';
 
 const CanvasSize = () => {
-  const templateOptions = [
-    { value: 'a1', label: 'A1' },
-    { value: 'a2', label: 'A2' },
-    { value: 'a3', label: 'A3' },
-    { value: 'a4', label: 'A4' },
-    { value: 'a5', label: 'A5' },
-  ];
+  const [selectedTemplate, setSelectedTemplatet] = useState(templateOptions[0]);
 
-  const UnitsOptions = [
-    { value: 'px', label: 'px' },
-    { value: 'mm', label: 'mm' },
-  ];
+  const [width, setWidth] = useState(1280);
+  const [height, setHeight] = useState(720);
 
   return (
     <div className={styles.container}>
       <div className={styles.item}>
         <label className={styles.label}>Template</label>
-        <Select options={templateOptions} placeholder="Select template" />
+        <Select
+          options={templateOptions}
+          placeholder="Select template"
+          value={selectedTemplate}
+          onChange={(newValue) => setSelectedTemplatet(newValue!!)}
+        />
       </div>
       <div className={styles.item}>
         <label className={styles.label}>Units</label>
-        <Select options={UnitsOptions} placeholder="Select units" />
+        <Select options={unitsOptions} placeholder="Select units" />
       </div>
       <div className={styles.item}>
         <div className={styles.size}>
           <div className={styles.item}>
             <label className={styles.label}>Width</label>
-            <NumericFormat value={1280} className={styles.input} />
+            <NumericFormat
+              className={styles.input}
+              value={width}
+              onChange={(e) => setWidth(Number(e.target.value))}
+            />
           </div>
           <div className={styles.dash}>&#8212;</div>
           <div className={styles.item}>
             <label className={styles.label}>Height</label>
-            <NumericFormat value={720} className={styles.input} />
+            <NumericFormat
+              className={styles.input}
+              value={height}
+              onChange={(e) => setHeight(Number(e.target.value))}
+            />
           </div>
         </div>
       </div>
